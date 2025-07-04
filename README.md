@@ -63,37 +63,39 @@ Este challenge implica conocimientos en GIT, JavaScript, Node.js, Express y Reac
 
 2. Backend
 En una terminal:
-
+    ```plaintext
     cd backend 
     npm install
     cp .env.example .env
     # o crea .env manualmente con:
     # PORT = 3000
     npm run dev
+    ```
 
 El backend corre por defencto en:
 http://localhost:3000/api
 
 3. Frontend
 En otra terminal corre:
-
+    ```plaintext
     cd frontend
     npm install
     cp .env.example .env
     # o crea .env manualmente con:
     # VITE_API_URL=http://localhost:3000/api
     npm run dev
-
+    ```
 El frontend corre por defecto en:
 http://localhost:5173
 
 # Endpoints de la API
 
-Método          Ruta                Descripción
-GET             /api/tasks          Obtiene todas las tareas
-POST            /api/tasks          Crea una nueva tarea
-PUT             /api/tasks/:id      Actualiza una tarea
-DELETE          /api/tasks/:id      Elimina una tarea
+| Método  | Ruta              | Descripción                |
+|---------|-------------------|----------------------------|
+| GET     | `/api/tasks`      | Obtiene todas las tareas   |
+| POST    | `/api/tasks`      | Crea una nueva tarea       |
+| PUT     | `/api/tasks/:id`  | Actualiza una tarea        |
+| DELETE  | `/api/tasks/:id`  | Elimina una tarea          |
 
 # Funcionalidad
 - Crear tareas
