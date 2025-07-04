@@ -1,4 +1,4 @@
-# ToDo App - Challenge Academia ForIt 2025 #
+# ToDo App - Challenge Academia ForIt 2025
 
 Aplicación básica de lista de tareas que desarrolla en el marco de un callenge de ingreso a la Acdemia For IT 2025.
 Este challenge implica conocimientos en GIT, JavaScript, Node.js, Express y React.
@@ -14,6 +14,7 @@ Este challenge implica conocimientos en GIT, JavaScript, Node.js, Express y Reac
 
 
 # Estructura del proyecto:
+```plaintext
 /
 |-- backend/
 |   |-- node_modules/
@@ -49,6 +50,7 @@ Este challenge implica conocimientos en GIT, JavaScript, Node.js, Express y Reac
 |   |-- edit-task.png
 |   |-- delete-task.png
 |-- README.md
+```
 
 # Requisitos previos
 - Node.js instalado (v18+ recomendado)
