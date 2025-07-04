@@ -58,9 +58,11 @@ Este challenge implica conocimientos en GIT, JavaScript, Node.js, Express y Reac
 
 # Instalación y ejecución
 1. Clonar el repositorio
+    ```plaintext
     git clone <URL_DEL_REPOSITORIO>
     cd <nombre-del-repo>
-
+    ```
+    
 2. Backend
 En una terminal:
     ```plaintext
