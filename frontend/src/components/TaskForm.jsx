@@ -16,7 +16,7 @@ function TaskForm() {
       fetch(`${API_URL}/tasks`)
         .then((res) => res.json())
         .then((data) => {
-          const task = data.find((t) => t.id === parseInt(id));
+          const task = data.find((t) => t.id === id);
           if (task) {
             setTitle(task.title);
             setDescription(task.description);
@@ -36,6 +36,8 @@ function TaskForm() {
       completed,
     };
 
+    console.log(taskData) // Verificar que datos se envían bien al back
+
     try {
       if (id) {
         await fetch(`${API_URL}/tasks/${id}`, {
@@ -44,7 +46,7 @@ function TaskForm() {
           body: JSON.stringify(taskData),
         });
       } else {
-        taskData.createAt = new Date();
+        taskData.createdAt = new Date();
         await fetch(`${API_URL}/tasks`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -78,7 +80,7 @@ function TaskForm() {
             className="form-control"
             rows="3"
             value={description}
-            onChange={(e) => setDescription(e.targett.value)}
+            onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
 

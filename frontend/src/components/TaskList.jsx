@@ -32,9 +32,9 @@ function TaskList() {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 bg-dark p-4">
       <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2>Lista de Tareas</h2>
+        <h2 className="text-white">Lista de Tareas</h2>
         <Link to="/new" className="btn btn-primary">
           + Nueva tarea
         </Link>
@@ -46,7 +46,8 @@ function TaskList() {
         <table className="table table-striped">
           <thead>
             <tr>
-              <th>Título / Descripción</th>
+              <th>Título</th>
+              <th>Descripción</th>
               <th>Creada</th>
               <th>Estado</th>
               <th>Acciones</th>

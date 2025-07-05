@@ -6,7 +6,7 @@ function TaskItem({ task, onDelete }) {
   return (
     <tr>
       <td>{task.title}</td>
-      <div className="text-muted small">{task.description}</div>
+      <td>{task.description}</td>
       <td>{createdDate}</td>
       <td>
         {task.completed ? (
@@ -17,7 +17,7 @@ function TaskItem({ task, onDelete }) {
       </td>
       <td>
         <Link
-          to={`/edit/$/{task.id}`}
+          to={`/edit/${task.id}`}
           className="btn btn-sm btn-outline-secondary me-2"
         >
           Editar
