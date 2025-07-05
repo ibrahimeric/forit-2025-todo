@@ -60,7 +60,7 @@ function TaskForm() {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 bg-secondary p-4">
       <h2>{id ? "Editar Tarea" : "Nueva Tarea"}</h2>
       <form onSubmit={handleSubmit} className="mt-4">
         <div className="mb-3">

@@ -23,6 +23,9 @@ function TaskList() {
 
   // Eliminar tareas
   const deleteTask = async (id) => {
+    const confirmDelete = window.confirm("¿Seguro que deseas eliminar esta tarea?");
+    if (!confirmDelete) return;
+
     try {
       await fetch(`${API_URL}/tasks/${id}`, { method: "DELETE" });
       setTasks(tasks.filter((task) => task.id !== id));
@@ -30,6 +33,7 @@ function TaskList() {
       console.log("Error deleting task:", err);
     }
   };
+
 
   return (
     <div className="container mt-5 bg-dark p-4">
