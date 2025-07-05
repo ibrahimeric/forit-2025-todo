@@ -17,10 +17,10 @@ Este challenge implica conocimientos en GIT, JavaScript, Node.js, Express y Reac
 ```plaintext
 /
 |-- backend/
+|   |-- data/
+|   |   |-- tasks.js/
 |   |-- node_modules/
-|   |-- .env
 |   |-- .env.example
-|   |-- .gitkeep
 |   |-- index.js
 |   |-- package-lock.json
 |   |-- package.json
@@ -33,12 +33,9 @@ Este challenge implica conocimientos en GIT, JavaScript, Node.js, Express y Reac
 |   |   |   |-- TaskList.jsx
 |   |   |   |-- TaskItem.jsx
 |   |   |   |-- TaskForm.jsx
-|   |   |-- css/
+|   |   |-- App.jsx
 |   |   |-- main.jsx
-|   |-- .env
 |   |-- .env.example
-|   |-- .gitignore
-|   |-- .gitkeep
 |   |-- eslint.config.js
 |   |-- index.html
 |   |-- package-lock.json
@@ -49,6 +46,7 @@ Este challenge implica conocimientos en GIT, JavaScript, Node.js, Express y Reac
 |   |-- add-task.png
 |   |-- edit-task.png
 |   |-- delete-task.png
+|   .gitignore
 |-- README.md
 ```
 
