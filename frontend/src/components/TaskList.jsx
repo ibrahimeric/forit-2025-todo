@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
 import TaskItem from "./TaskItem";
 
 function TaskList() {
@@ -10,16 +9,16 @@ function TaskList() {
   // Cargar tareas al montar
   useEffect(() => {
     const fetchTasks = async () => {
-    try {
-      const res = await fetch(`${API_URL}/tasks`);
-      const data = await res.json();
-      setTasks(data);
-    } catch (err) {
-      console.error("Error fetching tasks:", err);
-    }
-  };
+      try {
+        const res = await fetch(`${API_URL}/tasks`);
+        const data = await res.json();
+        setTasks(data);
+      } catch (err) {
+        console.error("Error fetching tasks:", err);
+      }
+    };
 
-  fetchTasks();
+    fetchTasks();
   }, [API_URL]);
 
   // Eliminar tareas
@@ -47,39 +46,15 @@ function TaskList() {
         <table className="table table-striped">
           <thead>
             <tr>
-              <th>Título</th>
+              <th>Título / Descripción</th>
+              <th>Creada</th>
               <th>Estado</th>
               <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
             {tasks.map((task) => (
-              <tr key={task.id}>
-                <td>{task.title}</td>
-                <td>
-                  {task.completed ? (
-                    <span className="badge bg-success">Completada</span>
-                  ) : (
-                    <span className="badge bg-warning text-dark">
-                      Pendiente
-                    </span>
-                  )}
-                </td>
-                <td>
-                  <Link
-                    to={`/edit/${task.id}`}
-                    className="btn btn-sm btn-outline-secondary me-2"
-                  >
-                    Editar
-                  </Link>
-                  <button
-                    onClick={() => deleteTask(task.id)}
-                    className="btn btn-sm btn-outline-danger"
-                  >
-                    Eliminar
-                  </button>
-                </td>
-              </tr>
+              <TaskItem key={task.id} task={task} onDelete={deleteTask} />
             ))}
           </tbody>
         </table>
